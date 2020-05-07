@@ -1,0 +1,388 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>TeleMedicine</title>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="" />
+    <!--bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <!--owl carousel css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/custom-bootstrap-margin-padding.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/owl.carousel.min.css">
+    <!--magnific popup css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/magnific-popup.css">
+    <!--icomoon css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/icomoon.css">
+    <!--icofont css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/icofont.min.css">
+    <!--animate css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/animate.css">
+    <!--main css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Start Preloader-->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell align-middle">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Preloader-->
+    <!--start header-->
+    <section class="top_bar">
+        <div class="container">
+            <h4>Helpline number : Ambulance Dial 108 || Telmedicine Dial 104</h4>
+        </div>
+    </section>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <!-- Logo -->
+                <a class="logo" href="#"><h4 class="header_logo">TeleMedicine</h4></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"><i class="icofont-navigation-menu"></i></span>
+                </button>
+                <!-- navbar links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-scroll-nav="0"> चिकित्सा परामर्श</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">सैंपल कलेक्शन </a>
+                        </li>
+
+
+                        @*<li class="nav-item">
+                                <a class="nav-link" href="#">ऑनलाइन पंजीयन </a>
+                            </li>*@
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                दवाइयों की घर
+                                पहुच सेवा
+                            </a>
+                        </li>
+                        @*
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link text-white btn btn-danger" href="@Url.Action("Registration","Home")">पंजीयन करें</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--end header-->
+    <!--start home area-->
+    <section id="home-area" data-scroll-index="0">
+
+        <div class="container">
+            <div class="row">
+                <!--start caption content-->
+
+                <div class="col-md-7">
+                    <div class="home-carousel owl-carousel">
+                        <!--start testimonial single-->
+                        <div class="item">
+                            <img src="~/assets/images/slider/slider-1.jpg" width="100%">
+                        </div>
+                        <div class="item">
+                            <img src="~/assets/images/slider/slider-2.jpg" width="100%">
+                        </div>
+                        <div class="item">
+                            <img src="~/assets/images/slider/slider-3.jpg" width="100%">
+                        </div>
+                        <div class="item">
+                            <img src="~/assets/images/slider/slider-4.jpg" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <!--end caption content-->
+                <!--start caption image-->
+                <div class="col-md-5">
+                    <div class="home-newsletter text-center">
+                        @*<a href="TMHelpDesk/RegisteredPatientReport.aspx">TMHelpDesk/RegisteredPatientReport.aspx</a>*@
+                        <h2>लॉग इन करें</h2>
+                        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Your Mobile No.">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Password">
+                            </div>
+
+                            <button type="submit">Login</button>
+                            <a href="#">Forget Password</a>
+                        }
+                        @*<form action="TMHelpDesk/PatientCaseReport.aspx" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Your Mobile No.*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter OTP">
+                                </div>
+                                <button type="submit">Login</button>
+                                <a href="#">Forget Password</a>
+                            </form>*@
+                    </div>
+                </div>
+                <!--end caption image-->
+            </div>
+        </div>
+    </section>
+    <!--end home area-->
+    <!--start feature area-->
+    <!--end feature area-->
+    <!--start newsletter area-->
+    <section class="help_center_list" class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 pr-lg-0">
+                    <div class="help_center_list_box">
+                        <img class="float-left mt-10" src="~/assets/images/icons/service-5.png" width="70px">
+                        <div class="pl-80">
+                            <h4>स्वास्थ्य सुविधा प्रदाता की सूचि</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pl-lg-0 pr-lg-0">
+                    <div class="help_center_list_box">
+                        <img class="float-left mt-10" src="~/assets/images/icons/service-6.png" width="70px">
+                        <div class="pl-80">
+                            <h4>अस्पतालों  एवं स्वास्थ्य केन्द्रों  की सूचि</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pl-lg-0">
+                    <div class="help_center_list_box">
+                        <img class="float-left mt-10" src="~/assets/images/icons/service-7.png" width="70px">
+                        <div class="pl-80">
+                            <h4>लैब एवं जाँच केन्द्रों <br>की सूचि</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end newsletter area-->
+    <!--start faq area-->
+    <section id="faq-area">
+        <div class="container">
+            <div class="row">
+                <!--start heading-->
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="section-heading text-center">
+                        <h2>FAQs</h2>
+                    </div>
+                </div>
+                <!--end heading-->
+            </div>
+            <!--start faq accordian-->
+            <div id="accordion2" role="tablist">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq1">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">दवाइयां घर तक कैसे मंगवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="faq1" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq2">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">ऑनलाइन परामर्श लेने कि प्रक्रिया ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="faq2" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq3">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">नजदीकी अस्पताल में जाँच कैसे करवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="faq3" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq4">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">दवाइयां घर तक कैसे मंगवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="faq4" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                    </div>
+                    <div class="col-md-6">
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq5">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">दवाइयां घर तक कैसे मंगवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="faq5" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq6">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse6" aria-expanded="false" aria-controls="collapse6">दवाइयां घर तक कैसे मंगवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="faq6" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq7">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse7" aria-expanded="false" aria-controls="collapse7">दवाइयां घर तक कैसे मंगवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse7" class="collapse" role="tabpanel" aria-labelledby="faq7" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                        <!--start faq single-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="faq8">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapse8" aria-expanded="false" aria-controls="collapse8"> दवाइयां घर तक कैसे मंगवाए ?</a>
+                                </h5>
+                            </div>
+                            <div id="collapse8" class="collapse" role="tabpanel" aria-labelledby="faq8" data-parent="#accordion2">
+                                <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</div>
+                            </div>
+                        </div>
+                        <!--end faq single-->
+                    </div>
+                </div>
+            </div>
+            <!--end faq accordian-->
+        </div>
+    </section>
+    <!--end faq area-->
+    <!--start footer-->
+    <footer class="footer" class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <img class="footer_logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Seal_of_Chhattisgarh.png/220px-Seal_of_Chhattisgarh.png" width="100px">
+                        <h4 class="text-white mt-10">CM Bhupesh Baghel</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="">
+                        <h5 class="text-white">Usefull Links</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">List</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="">
+                        <h5 class="text-white">Services</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">List</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="">
+                        <h5 class="text-white">Usefull Links</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">List</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end footer-->
+    <!--jQuery js-->
+    <script src="~/assets/js/jquery-3.3.1.min.js"></script>
+    <!--proper js-->
+    <script src="~/assets/js/popper.min.js"></script>
+    <!--bootstrap js-->
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <!--magnic popup js-->
+    <script src="~/assets/js/magnific-popup.min.js"></script>
+    <!--owl carousel js-->
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <!--scrollIt js-->
+    <script src="~/assets/js/scrollIt.min.js"></script>
+    <!--validator js-->
+    <script src="~/assets/js/validator.min.js"></script>
+    <!--contact js-->
+    <script src="~/assets/js/contact.js"></script>
+    <!--main js-->
+    <script src="~/assets/js/custom.js"></script>
+</body>
+</html>
+

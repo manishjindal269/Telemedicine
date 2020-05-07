@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+          data.addRows(
+              [
+                  [
+                      { 'v': 'Chhattisgarh'},
+                      '', ''   //   first-parent second-tooltip
+                  ],
+                  [
+                      { 'v': 'Div-Raipur', 'f': 'Raipur' },
+                      'Chhattisgarh', 'VP'
+                  ],
+                  ['Division 2', 'Chhattisgarh', ''],
+                  ['Division 3', 'Chhattisgarh', ''],
+                  ['Division 5', 'Chhattisgarh', ''],
+                  ['Division 5', 'Chhattisgarh', ''],
+
+                  ['Raipur', 'Div-Raipur', ''],
+                  ['District 2', 'Div-Raipur', ''],
+                  ['CHC Arang', 'Raipur', ''],
+                  ['Block 2', 'Raipur', ''],
+
+                  ['CHC1', 'CHC Arang', ''],
+                  ['CHC2', 'CHC Arang', ''],
+                  ['CHC3', 'CHC Arang', ''],
+
+
+                  ['PHC1', 'CHC1', ''],
+                  ['PHC2', 'CHC1', ''],
+                  ['PHC3', 'CHC1', ''],
+                  ['SHC1', 'PHC1', ''],
+
+
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+    </script>
+</head>
+<body>
+    <div id="chart_div"></div>
+</body>
+</html>
